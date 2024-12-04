@@ -1,6 +1,9 @@
-### What is Git and Why is it used ?
-A. Git is a popular version control system. It is used for tracking code changes, tracking who made changes and also coding collaboration.
+### What is Git and Why is it used?
+Ans. Git is a popular version control system. It is used for tracking code changes, tracking who made changes and also coding collaboration.
 
-### What is difference between Git and GitHub ?
-A. Git is the Verion Control System while Github is a web hosting platform for git repositories.
-   Github provides features like "Collaboration tools, issue tracking and pull requests and integrate with other services.
+### What is difference between Git and GitHu?
+Ans. Git is the Verion Control System while Github is a web hosting platform for git repositories.
+     Github provides features like "Collaboration tools, issue tracking and pull requests and integrate with other services.
+
+### What is Repository in Git?
+Ans. Repository is a collection of files and directories along with the version history of those files.
