@@ -1,9 +1,68 @@
 ### What is Git and Why is it used?
 Ans. Git is a popular version control system. It is used for tracking code changes, tracking who made changes and also coding collaboration.
 
-### What is difference between Git and GitHu?
+### What is difference between Git and GitHub?
 Ans. Git is the Verion Control System while Github is a web hosting platform for git repositories.
      Github provides features like "Collaboration tools, issue tracking and pull requests and integrate with other services.
 
 ### What is Repository in Git?
 Ans. Repository is a collection of files and directories along with the version history of those files.
+
+### What is Git Branch and why is it used?
+Ans. Branches are represents a independent line of development. Branches are used to isolate work on new features, bug fixes, experiments without
+     affecting the main codebase.
+
+###### Git Commands ######
+
+git config user.name "manoj" ----> To create a username.
+
+git config user.mail "manoj@gmail.com ---> To create a usermail.
+
+git config --list ---> List of all users and mails.
+
+git config --edit ---> Modify the username.
+
+git init --------> Initialize a new git repository created.
+
+git add ---------> Adds the changes in the working directory into staging area.
+
+git commit -m ---> To save the records changes to the Local Repository.
+
+git revert <commit_id> ----> It is used for undoing changes to a repository's commit history.
+
+git log ---------> Display the history of commits or details lists repository.
+
+git log --oneline ---> Print a single commit in a single line as output.
+
+git status ------> Display the status of changes as untracked files to tracked files.
+
+git rm --cached <file_name> ----> Tracked files converted into untracked files.
+
+git branch ------> To see the current branch.
+
+git branch <branch_name> -------> To create a new branch added.
+
+git checkout <branch_name> -----> To switch a  branch.
+
+git chekout -b <branch_name> ---> To create branch & switch at a time.
+
+git branch -d <branch_name> ----> To delete a branch.
+
+git branch -m <old> <new> ------> To rename a branch.
+
+git remote add origin <url> ----> It is used to add a remote repository to your local Git repository.
+
+git push origin <branch> -------> Upload local repository content to a remote repository.
+
+git push <remote_name> --delete <branch_name> ---> To delete the remote repository.
+
+git pull origin <branch> -------> Fetch and merge changes from the remote repository to the local repository.
+
+git merge <branch> ---> Combines changes from one branch to another branch.
+
+git clone <github_url> ---> Downloads a Git repository from a remote repository and copies it to a new directory on your local machine. 
+
+git diff <commit_7digits> <commit_7digits> ---> Difference between two files changes.
+
+
+
