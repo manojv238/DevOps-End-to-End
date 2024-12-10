@@ -10,3 +10,28 @@ Step 5: Create a new configuration file is [vi maven.sh]
 Step 6: We can give all permissions that file [chmod 777 maven.sh].
 Step 7: Load the maven file in system level [source maven.sh] and check the Maven Veriosn [mvn --version].
 
+
+### What is Maven and how does it helps in DevOps?
+Ans.Maven is a Build automation tool. This tool is primarily used in Java projects.
+    It helps to manage project dependencies & builld automation processes.
+
+### What is a Maven Repository?
+Ans.Maven repository is the storage place for the entire library jar files, plugins and all other project artifacts.
+    There are 3 different types of Maven repository they are Central, Local, and Remote.
+
+### What is Maven Plugins and Why Maven plugins are used?
+Ans.Plugins are used to: create jar files, create war files, compile code, unit test code, create project documentation.
+
+### What is POM file in Maven?
+Ans.Project Object Model(POM file) that contains information about the project details and configuration details.
+    It is used by Maven to build projects.
+
+### What is a Maven artifact?
+Ans.A Maven artifact is a file usually a jar that is stored in the Maven repository.
+    It consists of an artifact group ID, an artifact ID, and a version string.
+
+###
+
+
+
+
