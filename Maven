@@ -19,7 +19,7 @@ Ans.A Maven build life cycle consists of all the defined phases required,
 Ans.The phases of the Maven Build Life Cycle are as follows,
 
     • mvn validate - This validates the project and ensures all the necessary information is available.
-    • mvn compile  - Used to compile the source code of the project.
+    • mvn compile  - Used to compile the source code of the project such as Target file will be created.
     • mvn test     - Used to test the compiled source code with a unit testing framework.
     • mvn package  - This is used to packaged the compiled code and package into converted format like JAR files & WAR files.
     • mvn verify   - Run checks on the packaged file is valid and meets the required quality criteria.
