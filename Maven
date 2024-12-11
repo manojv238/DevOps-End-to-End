@@ -26,6 +26,9 @@ Ans.The phases of the Maven Build Life Cycle are as follows,
     • mvn install  - Install the package JAR file into the local repository.
     • mvn deploy   - To deploy copies of the final package to the remote repository.
 
+######## How to excute jar file in maven -------> [java -jar target/jar file path]. ##########
+
+
 ### What are the phases of the Clean Life Cycle?
 Ans.The clean life cycle consists of the following phases,
 
