@@ -27,6 +27,33 @@ docker rm <container-id> -----> This command is used to remove a Docker containe
 
 
 
+########### Dockerfiles ############
+FROM ---> It defines the base image to start the build process.
+
+ADD & COPY ----> Copies the files from a source on the host into the containers own filesystem at the destination.
+
+CMD ----> It can be used for executing a specific command within the conatiner. 
+
+ENTRYPOINT ----> It sets a default application to be used every time a container is created with the image.
+
+ENV ----> It sets a environment variables.
+
+EXPOSE -> It associates a specific port to enable networking between container and to the outside.
+
+MAINTAINER ----> It defines a full name and email address of the image creator.
+
+RUN ----> It is the central executing directive for Dockerfiles.
+
+USER ---> It sets the UID or USERNAME which is to run the container.
+
+VOLUME -> It is used to enable access from container to a directory on the host machine.
+
+WORKDIR -------> It sets the path where the command, defined with CMD is to be executed.
+
+LABEL --> It allows to add a label to your docker image.
+
+
+
 
 ### What is Docker?
 Ans.Docker is a open-source platform that automates the deployment of applications quickly within lightweight containers.
@@ -50,6 +77,7 @@ Ans.A Docker image is created using a Dockerfile, which contains a series of ins
 ### What is a Dockerfile?
 Ans.A Dockerfile is a text file that contains a set of instructions used to build a Docker image.
      It specifies the base image, adds files, installs dependencies, and configures the environment.
+
 
 ### What is Docker Hub and how is it used? 
 Ans.Docker Hub is a cloud-based registry service that allows users to store, share, and distribute Docker images.
