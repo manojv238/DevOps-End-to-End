@@ -28,27 +28,27 @@ docker rm <container-id> -----> This command is used to remove a Docker containe
 
 
 ########### Dockerfiles ############
-FROM ---> It defines the base image to start the build process.
+FROM ---> To pull the base image(docker-hub).
 
-ADD & COPY ----> Copies the files from a source on the host into the containers own filesystem at the destination.
+RUN ----> To execute linux commands.
+
+ADD & COPY ----> To copy a directory from local machine to the docker container.
 
 CMD ----> It can be used for executing a specific command within the conatiner. 
 
 ENTRYPOINT ----> It sets a default application to be used every time a container is created with the image.
 
+WORKDIR -------> It sets the path of working directory.
+
 ENV ----> It sets a environment variables.
 
-EXPOSE -> It associates a specific port to enable networking between container and to the outside.
+EXPOSE -> It associates a specific port to enable networking between container and to the outside.....
 
 MAINTAINER ----> It defines a full name and email address of the image creator.
 
-RUN ----> It is the central executing directive for Dockerfiles.
-
-USER ---> It sets the UID or USERNAME which is to run the container.
+USER ---> It sets the USERNAME which is to run the container.
 
 VOLUME -> It is used to enable access from container to a directory on the host machine.
-
-WORKDIR -------> It sets the path where the command, defined with CMD is to be executed.
 
 LABEL --> It allows to add a label to your docker image.
 
