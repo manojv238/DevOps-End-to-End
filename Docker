@@ -25,6 +25,8 @@ docker rmi <image-name> ------> This command is used to remove a Docker image.
 
 docker rm <container-id> -----> This command is used to remove a Docker container.
 
+docker rm $(docker ps -a -q) -> This command is ued to remove the all stopped containers are deleted.
+
 
 
 ########### Dockerfiles ############
