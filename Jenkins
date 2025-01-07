@@ -12,6 +12,7 @@ Ans.Jenkins is a open-source automation server used for Continuos Integration(CI
 Ans.Jenkins pipeline is a set of plugins that allows users to create and integrate continuous delivery (CD) pipelines into Jenkins.
 
 ### What is a plugin in DevOps?
-Ans.Plugins are extend the functionalities and capabilities of Jenkins to make it suitable for all user-specific needs.
+Ans.Plugin extend the functionalities and capabilities of Jenkins software. 
+    To make it suitable for all user-specific needs like source code(git), build tools(maven) & testing frameworks.
 
 
