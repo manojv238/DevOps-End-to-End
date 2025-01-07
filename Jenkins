@@ -1,1 +1,14 @@
+################# Jenkins Installation process ##################
+Step 1: Jenkins pre-requiresite is Java installation.[yum install java-17-amazon-corretto -y].
+Step 2: We can go jenkins webiste to copy the linux commands and execute them.
+Step 3: Now ready the jenkins setup.
+
+
+### What is Jenkins?
+Ans.Jenkins is a open-source automation server used for Continuos Integration(CI) & Continuos Delivery/Deployment(CD).
+    It automates the process od building, testing and deployment of software applications.
+
+### What is a Jenkins Pipeline?
+Ans.Jenkins pipeline is a set of plugins that allows users to create and integrate continuous delivery (CD) pipelines into Jenkins.
+
 
