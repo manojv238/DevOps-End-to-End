@@ -15,4 +15,13 @@ Ans.Jenkins pipeline is a set of plugins that allows users to create and integra
 Ans.Plugin extend the functionalities and capabilities of Jenkins software. 
     To make it suitable for all user-specific needs like source code(git), build tools(maven) & testing frameworks.
 
+### What is the CI/CD Pipeline?
+Ans.Continuos Integration and Continuos Delivery/Deployment is a process to automate software applications tasks like Build,Test & Deploy.
+    CI focuses on code integration and testing.
+    CD focuses on the complete release process.
+
+### What are build triggers in Jenkins?
+Ans.Jenkins build triggers allow for the automation of builds and deployments based on specific events or conditions.
+    
+
 
