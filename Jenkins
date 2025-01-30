@@ -15,6 +15,17 @@ Ans.-Easy installation and configuration.
     -Easy integration with version control system.
     -Pipeline as a code.
 
+### Advantages of CI/CD Pipelines?
+Ans.Faster Delivery
+    Quick deployments
+    Less chances of errors
+    Stability
+    Reliability
+    Quick bug fixes
+    Version controlled
+    Automations.
+    
+
 ### What is a Jenkins Pipeline?
 Ans.Jenkins pipeline is a set of plugins that allows users to create and integrate continuous delivery (CD) pipelines into Jenkins.
 
