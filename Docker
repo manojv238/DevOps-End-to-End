@@ -122,7 +122,7 @@ Ans.Docker network allows containers to communicate with each other and with the
 Ans.We can create a custom Docker network using the command [docker network create <docker-network].
 
 ### What are the different types of networks?
-Ans.The main types are bridge,host,overlay and none networks.
+Ans.The main types are bridge(within the single host),host,overlay(with multi-containers communicate) and none networks.
 
 ### What is the role of a Docker Registry?
 Ans.A Docker registry is a stroage and distributaion system for Docker images.
