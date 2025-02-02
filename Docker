@@ -9,6 +9,10 @@ docker pull <image-name> -----> This command is used to download a Docker image 
 
 docker build -t <image-name> -> This command is used to create a build Docker Image.
 
+docker exec -it <container-ID> /bin/sh ---> This command is used for login enter into the container.
+
+docker inspect container-ID> --> It will display of the container body details,[JSON Format].
+
 docker run <image-name/id> ---> This command is used to start a new Docker container from an image.
 
 docker run -d <image-name> ---> This command is used to run the container in the background instead,[detach].
