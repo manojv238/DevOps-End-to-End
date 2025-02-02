@@ -56,6 +56,15 @@ LABEL --> It allows to add a label to your docker image.
 
 
 
+### Why using in Docker?
+Ans.1.The Linux system environments mangement was becoming difficult if we are using jar files.
+    2.The CPU in the Memory management inside the Linux system was becoming difficult for us to manage.
+    3.The linux system cause coming high beacuse of the various of deployments right.
+      --->"you do one day (10deploymens) and tmrw day (20deployments) 
+      to support 30 deployments i need to increase my server of the linux systems" <---
+    4.The jars which are there from one system to another system the commucation network bridge was becoming diffult.
+    5.security and reliablity.
+
 
 ### What is Docker?
 Ans.Docker is a open-source platform that automates the deployment of applications quickly within lightweight containers.
