@@ -1,5 +1,5 @@
 ################# Jenkins Installation process ##################
-Step 1: Jenkins pre-requiresite is Java installation.[yum install java-17-amazon-corretto -y].
+Step 1: Jenkins pre-requiresite is Java installation.[yum install java-17-amazon-corretto -y]/[apt install openjdk-17-jre -y].
 Step 2: We can go jenkins webiste to copy the linux commands and execute them.
 Step 3: Now ready the jenkins setup.
 
