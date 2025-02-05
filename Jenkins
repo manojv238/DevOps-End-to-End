@@ -125,6 +125,12 @@ pipeline {
                     } 
                 }
             }
+
+         stage('Trivy scan image') {
+            steps {
+                sh "trivy image manuimage"
+              }
+           }
         }
     }
 }
