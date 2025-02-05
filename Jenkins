@@ -67,6 +67,67 @@ Ans.Jenkins pipeline stages represent distinct phases or steps in a software del
     The stages are defined in a Jenkinsfile and executed on a Jenkins node. 
 
 
+############ CICD PIPELINE in FULL IMPLEMENTATION #############
+
+pipeline {
+    agent any
+    
+    environment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages{
+        stage('Git clone') {
+            steps {
+                git changelog: false, poll: false, url: 'https://github.com/gashok13193/end-to-end.git'
+            }
+        }
+        
+        stage('Code compile') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+        
+        stage('SonarQube Analaysis') {
+            steps {
+                withSonarQubeEnv('SonarQube'){
+                    sh '''$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=new-project\
+                    -Dsonar.java.binaries=.\
+                    -Dsonar.projectKey=new-project'''
+                }
+                    
+            }
+        }
+        
+        stage('Code Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        
+        stage('Docker Build Image') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: 'Docker', toolName: 'Docker'){
+                        sh "docker build -t cicd ."
+                    } 
+                }
+            }
+        }
+        
+         stage('Docker Image Push') {
+            steps {
+                script{
+                    withDockerRegistry(credentialsId: 'Docker', toolName: 'Docker'){
+                        sh "docker tag cicd manu9121/docker-images:$BUILD_ID"
+                        sh "docker push manu9121/docker-images:$BUILD_ID"
+                    } 
+                }
+            }
+        }
+    }
+}
 
 
 
