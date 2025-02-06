@@ -67,8 +67,33 @@ Ans.Jenkins pipeline stages represent distinct phases or steps in a software del
     The stages are defined in a Jenkinsfile and executed on a Jenkins node. 
 
 
-############ CICD PIPELINE in FULL IMPLEMENTATION #############
+###################################### CICD PIPELINE in FULL IMPLEMENTATION ########################################
+Pre-Requiresists:-
+Install for all tools ubuntu/linux :git,java,maven,jenkins,dokcer,sonarqube,trivy and k8.
+---> 1st we can create jenkins job item (git clone)8080
+---> 2nd we can create maven configuration (mvn clean compile)
+---> 3rd we can install docker we can give permission"(sudo usermod -aG docker jenkins")"restart docker and jenkins."
+using docker run a sonarqube tools code quality.default user nd passwd (admin)9000
+By using command: "docker run -d -p 9000:9000 sonarqube:lts-community" (at a time create image nd container).
+once ready for sonarqube few steps we will follow below:-
+click by "MANUALLY" for "asking project" (create a new name project) then do setup.
+now go "with jenkins" click github,click next,again,and configures code analysis github.
+then go "Administrator" and click "security" then create a "generate token"/name. copy that aadress().
+now go with "manage jenkins" create a "credaintals" with sonarqube secret text (). once created.
+then go with plugins do install "sonarqube-scanner"
+then go tools and add a "SonarQube Scanner installations" create a name "sonar-scanner" and do save.
+then go "system" and choose a sonar servers and 
+add a "credaintals with sonarqube"(SonarQube)"."asking url","authencation".
+now go pipeline and create a stage "sonar analaysis". upper write a "environmemnt{SCANNER_HOME=tool 'sonar-scanner'}."
+---> 4th now build a code stage using "mvn clean install"(jar file created)".
+---> 5th go with "manage jenkins" do installl "plugin(docker)4in top(commons,pipeline.API,docker."
+now gow with tools and chose a add "docker install"
+then go with "credaintals" and create a "docker-hub user and passwd details".
+now go with pipeline stage "create a docker image".
+---> 6th we can push image to docker hub stage pipeline.
 
+
+###################################################################################################################
 pipeline {
     agent any
     
