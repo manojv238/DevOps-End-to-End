@@ -127,6 +127,16 @@ Ans.The main types are bridge(within the single host),host,overlay(with multi-co
 ### What is the role of a Docker Registry?
 Ans.A Docker registry is a stroage and distributaion system for Docker images.
 
+### Disadavantages of Docker that why we choose K8?
+Ans.I was not able to provide better security of my application.
+    Docker was not giving to multi-architecture format.
+    The maintance of docker containers was difficult.
+    There was no proper dashboard giving by docker to monitoring docker containers.
+    No proper rollback
+    No proper strategy deployment in docker.
+    No auto scalling or auto healing.
+    
+
 
 
 
