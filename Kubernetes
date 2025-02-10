@@ -1,1 +1,41 @@
+### What is Kubernetes?
+Ans.Kubernetes  is an open-source container orchestration platform,
+    that automates the deployment, scaling, and management of containerized applications.
+    It was originally developed by "Google" and is now maintained by the "Cloud Native Computing Foundation(CNCF)".
+
+### Explain of Arcitecture in K8s?
+Ans.Kubernetes (K8s) follows a Master Node-Worker Node architecture :- 
+    Master Node ntg but "Control Plane" manages the Clusters and Orchestrates operations.
+    ### Master Nodes components :-
+    1. API Server (kube-apiserver) ---> "Acts as the entry point for all Kubernetes operations (REST API)".
+    2. etcd (Database) ---> "A key-values store that holds all cluster data (state, configuration, etc)".
+    3. Scheduler (kube-scheduler) ---> "Assigns pods to worker nodes based on available resources and policies".
+    4. Controller-Manager ---> "The Controller Manager continuously monitors and maintains the desired state".
+
+    Worker Node that run containerized applications.
+    ### Worker Nodes components :-
+    1. Kubelet ---> "The Kubelet on that Worker Node communicates with the API Server to ensure the Pod is running".
+    2. Kube Proxy ---> "Kube Proxy ensures networking and allows communication between Pods and Services".
+    3. Container Runtime ---> "The Container Runtime starts the container(s) inside the Pod".
+    4. Pods (containers inside) ---> "A group of one or more containers running instances of an application".
+
+### What is a Pod in Kubernetes?
+Ans.Pod is the smallest and simplest deployable unit in Kubernetes, 
+    It represents one or more containers that share the same network and storage.
+
+### What is a Kubernetes Service?
+Ans.A Kubernetes Service is a logical abstraction that ensures stable networking for a group of Pods.
+    Since Pods are ephemeral and their IP addresses change dynamically,
+    a Service provides a fixed IP address and DNS name to ensure continuous connectivity.
+    Types of Services:-
+    1.ClusterIP is best for internal communication.
+    2.NodePort allows external access via a fixed port.
+    3.LoadBalancer is ideal for cloud-based public services.
+    4.ExternalName links to external resources.
+
+
+
+
+
+
 
