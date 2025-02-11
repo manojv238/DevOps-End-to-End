@@ -53,11 +53,13 @@ Ans.
 Ans.A Kubernetes Service is a logical abstraction that ensures stable networking for a group of Pods.
     Since Pods are ephemeral and their IP addresses change dynamically,
     a Service provides a fixed IP address and DNS name to ensure continuous connectivity.
-    Types of Services:-
-    1.ClusterIP is best for internal communication.
-    2.NodePort allows external access via a fixed port.
-    3.LoadBalancer is ideal for cloud-based public services.
-    4.ExternalName links to external resources.
+    +-----------------------+
+    🔹Types of Services:-
+    +-----------------------+
+    1.ClusterIP ---> Exposes a service within the cluster with a stable internal IP address.."(Default Service Type)".
+    2.NodePort  ---> Exposes a service on a static port on each Node in the Cluster.
+    3.LoadBalancer ---> Exposes a service externally with a public IP, Uses a cloud load balancer."(AWS)".
+    4.ExternalName ---> Maps a Service to an external DNS name.
 
 ### Explain the difference between a Deployment and a ReplicaSet in Kubernetes?
 Ans.
