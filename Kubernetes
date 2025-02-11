@@ -23,6 +23,32 @@ Ans.Kubernetes (K8s) follows a Master Node-Worker Node architecture :-
 Ans.Pod is the smallest and simplest deployable unit in Kubernetes, 
     It represents one or more containers that share the same network and storage.
 
+### What is the difference between a Docker Container and a Kubernetes Pod?
+Ans.
++----------------------+----------------------------+--------------------------------+
+| 🔹Features           | 🔹Docker Container         | 🔹Kubernetes Pod               |
++----------------------+----------------------------+--------------------------------+
+| **Basic Unit**       | A single container.        | A group of one or more         |
+|                      |                            | containers.                    |
++----------------------+----------------------------+--------------------------------+
+| **Networking**       | Each container has its     | All containers in a pod        |
+|                      | own isolated network.      | share the same IP.             |
++----------------------+----------------------------+--------------------------------+
+| **Storage**          | Uses Docker volumes        | Shares storage between         |
+|                      | (isolated to each          | containers in the pod.         |
+|                      | container).                |                                |
++----------------------+----------------------------+--------------------------------+
+| **Orchestration**    | Requires manual            | Managed automatically by       |
+|                      | orchestration or Docker    | Kubernetes.                    |
+|                      | Swarm.                     |                                |
++----------------------+----------------------------+--------------------------------+
+| **Scaling**          | Must be manually managed   | Scales automatically with      |
+|                      | or done via Docker Swarm.  | Kubernetes Deployments.        |
++----------------------+----------------------------+--------------------------------+
+| **Self-Healing**     | Containers don’t restart   | Kubernetes restarts failed     |
+|                      | automatically on failure.  | pods automatically.            |
++----------------------+----------------------------+--------------------------------+
+
 ### What is a Kubernetes Service?
 Ans.A Kubernetes Service is a logical abstraction that ensures stable networking for a group of Pods.
     Since Pods are ephemeral and their IP addresses change dynamically,
