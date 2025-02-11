@@ -59,6 +59,26 @@ Ans.A Kubernetes Service is a logical abstraction that ensures stable networking
     3.LoadBalancer is ideal for cloud-based public services.
     4.ExternalName links to external resources.
 
+### Explain the difference between a Deployment and a ReplicaSet in Kubernetes?
+Ans.
++----------------------+-----------------------------------+----------------------------------+
+|  🔹Feature           |  🔹Deployment                     |  🔹ReplicaSet                    |
++----------------------+-----------------------------------+----------------------------------+
+| **Purpose**          | Manages ReplicaSets and updates.  | Ensures a fixed number of pods.  |
++----------------------+-----------------------------------+----------------------------------+
+| **Rolling Updates**  | ✅ Supports rolling updates.      | ❌ Not supported.               |
++----------------------+-----------------------------------+----------------------------------+
+| **Rollback**         | ✅ Can rollback to previous       | ❌ No rollback support.         |
+|                      | versions.                         |                                  |
++----------------------+-----------------------------------+----------------------------------+
+| **Scaling**          | ✅ Supports auto/manual scaling.  | ✅ Supports scaling but no      |
+|                      |                                   | version management.              |
++----------------------+-----------------------------------+----------------------------------+
+| **Self-Healing**     | ✅ Recreates failed pods.         | ✅ Recreates failed pods.       |
++----------------------+-----------------------------------+----------------------------------+
+| **Use Case**         | Ideal for long-running apps.      | Used when only replica count     |
+|                      |                                   | matters, no updates needed.      |
++----------------------+----------------------------------+-----------------------------------+
 
 
 
