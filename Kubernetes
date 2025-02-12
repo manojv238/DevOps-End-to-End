@@ -116,7 +116,7 @@ Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Po
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-1️⃣ Workload Resources (Managing Applications)🏗 
+1️⃣ Workload Resources (Managing Applications) 🏗 
 +-----------------------------------------------------------------------------------------------------------------------+
 1.POD 🟢 ---> Pod is the smallest and simplest deployable unit in Kubernetes, it is a represents one or more containers.
 
@@ -151,14 +151,15 @@ Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Po
 2.Secret 🔐 ---> Stores sensitive data like passwords, API keys securely.
 
 +-----------------------------------------------------------------------------------------------------------------------+
-5️⃣ Security & Access Control 🛡
+5️⃣ RBAC (Role-Based Access Control) 🔑
 +-----------------------------------------------------------------------------------------------------------------------+
-1.ServiceAccount 👤 ---> Grants Pods specific permissions to interact with the API server.
+1.ServiceAccount Role 👤 ---> A Role defines a set of permissions for resources (like Pods, Services, etc.) within a namespace.
 
-2.Role & RoleBinding 🔏 ---> Grants permissions within a single namespace.
+2.RoleBinding 🔏 ---> Grants access based on a Role within a namespace.
 
-3.ClusterRole & ClusterRoleBinding 🌎 ---> Defines cluster-wide permissions.
+3.ClusterRole  ---> Grants cluster-wide permissions like managing Nodes or Namespaces.
 
+4.ClusterRoleBinding 🌎 ---> Grants access based on a ClusterRole across the cluster.
 +-----------------------------------------------------------------------------------------------------------------------+
 6️⃣ Cluster Resources & Node Management 🖥
 +-----------------------------------------------------------------------------------------------------------------------+
@@ -171,7 +172,7 @@ Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Po
 4.LimitRange 📏 ---> Defines min/max constraints on resource consumption per namespace.
 
 +-----------------------------------------------------------------------------------------------------------------------+
-7️⃣ Advanced & Miscellaneous Resources
+7️⃣ Advanced & Miscellaneous Resources 🚀
 +-----------------------------------------------------------------------------------------------------------------------+
 1.HorizontalPodAutoscaler (HPA) ---> Automatically scales pods based on CPU/memory usage.
 
@@ -179,7 +180,7 @@ Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Po
 
 3.CustomResourceDefinition (CRD) ---> Allows users to define their own Kubernetes resources.
 
-4.Operator ---> Automates the management of complex applications (built using CRDs).
+4.Operator ---> Automates the management of complex applications (built using CRDs)..
 
 
 
