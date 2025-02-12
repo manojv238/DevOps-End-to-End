@@ -3,6 +3,7 @@ Ans.Kubernetes  is an open-source container orchestration platform,
     that automates the deployment, scaling, and management of containerized applications.
     It was originally developed by "Google" and is now maintained by the "Cloud Native Computing Foundation(CNCF)".
 
+
 ### Explain of Arcitecture in K8s?
 Ans.Kubernetes (K8s) follows a Master Node-Worker Node architecture :- 
     Master Node ntg but "Control Plane" manages the Clusters and Orchestrates operations.
@@ -23,9 +24,11 @@ Ans.Kubernetes (K8s) follows a Master Node-Worker Node architecture :-
     3. Container Runtime ---> "The Container Runtime starts the container(s) inside the Pod".
     4. Pods (containers inside) ---> "A group of one or more containers running instances of an application".
 
+
 ### What is a Pod in Kubernetes?
 Ans.Pod is the smallest and simplest deployable unit in Kubernetes, 
     It represents one or more containers that share the same network and storage.
+
 
 ### What is the difference between a Docker Container and a Kubernetes Pod?
 Ans.
@@ -53,24 +56,33 @@ Ans.
 |                      | automatically on failure.  | pods automatically.            |
 +----------------------+----------------------------+--------------------------------+
 
+
 ### What is a Kubernetes Service?
 Ans.A Kubernetes Service is a logical abstraction that ensures stable networking for a group of Pods.
     Since Pods are ephemeral and their IP addresses change dynamically,
     a Service provides a fixed IP address and DNS name to ensure continuous connectivity.
-    +-----------------------+
-    🔹Types of Services:-
-    +-----------------------+
+    +-------------------------------------+
+    2️⃣ Networking & Service Discovery 🌐:-
+    +-------------------------------------+
     1.ClusterIP ---> Exposes a service within the cluster with a stable internal IP address.."(Default Service Type)".
+
     2.NodePort  ---> Exposes a service on a static port on each Node in the Cluster.
+
     3.LoadBalancer ---> Exposes a service externally with a public IP, Uses a cloud load balancer."(AWS)".
-    4.ExternalName ---> Maps a Service to an external DNS name.
+
+    4.Ingress  ----> Manages external access using HTTP/HTTPS routes with path-based routing.
+
+    5.NetworkPolicy --> Controls how pods communicate with each other and external services.
+
+
 
 ### Explain the difference between a Deployment and a ReplicaSet in Kubernetes?
 Ans.
 +----------------------+-----------------------------------+----------------------------------+
 |  🔹Feature           |  🔹Deployment                     |  🔹ReplicaSet                    |
 +----------------------+-----------------------------------+----------------------------------+
-| **Purpose**          | Manages ReplicaSets and updates.  | Ensures a fixed number of pods.  |
+| **Purpose**          | Manages ReplicaSets and updates.  | Ensures a fixed number of pods   |
+|                      |                                   | are running.                     |
 +----------------------+-----------------------------------+----------------------------------+
 | **Rolling Updates**  | ✅ Supports rolling updates.      | ❌ Not supported.               |
 +----------------------+-----------------------------------+----------------------------------+
@@ -86,12 +98,104 @@ Ans.
 |                      |                                   | matters, no updates needed.      |
 +----------------------+----------------------------------+-----------------------------------+
 
+
 ### What are Kubernetes Labels and Selectors?
 Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Pods, Services, Deployments, and Nodes.
     Selectors: Label selectors are used to filter and select Kubernetes objects based on their labels.
 
-### Concepts of Kubernetes (K8s) Resources 🚀?
-1️⃣ Workload Resources (Managing Applications):-
+
+### Concepts of Kubernetes (K8s) Resources 🚀:-
+
+🔹 How These Kubernetes Resources Work Together:
+1️⃣ A Deployment creates Pods that run containers.
+2️⃣ A Service exposes Pods for internal/external access.
+3️⃣ Ingress routes traffic from the internet to Services.
+4️⃣ ConfigMaps & Secrets store configurations and credentials.
+5️⃣ PersistentVolumes provide storage for applications.
+6️⃣ Network Policies enforce security between Pods.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+1️⃣ Workload Resources (Managing Applications)🏗 
++-----------------------------------------------------------------------------------------------------------------------+
+1.POD 🟢 ---> Pod is the smallest and simplest deployable unit in Kubernetes, it is a represents one or more containers.
+
+2.Deployment 🔄 --->  It can Manages ReplicaSets and updates.
+
+3.ReplicaSet 🔢 ---> Ensures a fixed number of pods are running.
+
+4.StatefulSet 🔗 ---> Used for stateful applications (e.g., databases), providing stable pod identities.
+
+5.DaemonSet 🛠 ---> Ensures that a copy of a pod runs on every node (useful for logging or monitoring agents).
+
+6.Job ⏳ ---> Runs a task once until completion.
+
+7.CronJob ⏰ ---> Schedules Jobs to run at specific times (like a cron task).
+
++-----------------------------------------------------------------------------------------------------------------------+
+3️⃣ Storage Management 💾
++-----------------------------------------------------------------------------------------------------------------------+
+1.PersistentVolume (PV) 💽 ---> Represents a storage resource in the cluster.
+
+2.PersistentVolumeClaim (PVC) 📂 ---> A request for storage from a PV.
+
+3.StorageClass 📦 ---> Defines different storage types (e.g., SSD, HDD, cloud storage).
+
+4.Volume ---> Temporary or persistent storage attached to a pod.
+
++-----------------------------------------------------------------------------------------------------------------------+
+4️⃣ Configuration & Secrets Management 🔑
++-----------------------------------------------------------------------------------------------------------------------+
+1.ConfigMap 📜 ---> Stores non-sensitive configuration data in key-value format.
+
+2.Secret 🔐 ---> Stores sensitive data like passwords, API keys securely.
+
++-----------------------------------------------------------------------------------------------------------------------+
+5️⃣ Security & Access Control 🛡
++-----------------------------------------------------------------------------------------------------------------------+
+1.ServiceAccount 👤 ---> Grants Pods specific permissions to interact with the API server.
+
+2.Role & RoleBinding 🔏 ---> Grants permissions within a single namespace.
+
+3.ClusterRole & ClusterRoleBinding 🌎 ---> Defines cluster-wide permissions.
+
++-----------------------------------------------------------------------------------------------------------------------+
+6️⃣ Cluster Resources & Node Management 🖥
++-----------------------------------------------------------------------------------------------------------------------+
+1.Node 🏗 ---> Represents a worker machine in the cluster.
+
+2.Namespace 🏷 ---> Logical separation of cluster resources.
+
+3.ResourceQuota 📊 ---> Limits resource usage within a namespace.
+
+4.LimitRange 📏 ---> Defines min/max constraints on resource consumption per namespace.
+
++-----------------------------------------------------------------------------------------------------------------------+
+7️⃣ Advanced & Miscellaneous Resources
++-----------------------------------------------------------------------------------------------------------------------+
+1.HorizontalPodAutoscaler (HPA) ---> Automatically scales pods based on CPU/memory usage.
+
+2.VerticalPodAutoscaler (VPA) ---> Adjusts resource requests/limits of pods automatically.
+
+3.CustomResourceDefinition (CRD) ---> Allows users to define their own Kubernetes resources.
+
+4.Operator ---> Automates the management of complex applications (built using CRDs).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
