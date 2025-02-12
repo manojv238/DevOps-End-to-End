@@ -90,6 +90,9 @@ Ans.
 Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Pods, Services, Deployments, and Nodes.
     Selectors: Label selectors are used to filter and select Kubernetes objects based on their labels.
 
+### Concepts of Kubernetes (K8s) Resources 🚀?
+1️⃣ Workload Resources (Managing Applications):-
+
 
 
 
