@@ -74,6 +74,24 @@ Ans.A Kubernetes Service is a logical abstraction that ensures stable networking
 
     5.NetworkPolicy --> Controls how pods communicate with each other and external services.
 
++-------------------+------------------------+--------------------------------------+
+| 🔹Feature        | 🔹Load Balancer                    | 🔹Ingress                 |
++-------------------+------------------------+--------------------------------------+
+| Network Layer    | Layer 4 (TCP/UDP)                  | Layer 7 (HTTP/HTTPS)      |
++-------------------+------------------------+--------------------------------------+
+| External IP      | Each service gets its own IP       | Multiple services share   |
+|                  |                                    |     a single IP           |  
++-------------------+------------------------+--------------------------------------+
+| Traffic Routing  | Direct to service                  | Path/Host-based rules     |
++-------------------+------------------------+--------------------------------------+
+| Cost             | High (one LB per svc)              | Lower (shared LB)         |
++-------------------+------------------------+--------------------------------------+
+| Flexibility      | Limited routing options            | Advanced routing          |
++-------------------+------------------------+--------------------------------------+
+| Use Case         | Exposing a single service directly | Managing multiple services|
+|                  |                                    | under one entry point     |
++-------------------+------------------------+--------------------------------------+
+
 
 
 ### Explain the difference between a Deployment and a ReplicaSet in Kubernetes?
