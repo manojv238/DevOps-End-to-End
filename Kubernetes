@@ -183,7 +183,8 @@ Ans.Labels: Labels in Kubernetes are key-value pairs assigned to objects like Po
 +-----------------------------------------------------------------------------------------------------------------------+
 1.Node 🏗 ---> Represents a worker machine in the cluster.
 
-2.Namespace 🏷 ---> Logical separation of cluster resources.
+2.Namespace 🏷 ---> A Namespace in Kubernetes is a logical partition within a cluster, 
+                    that allows multiple teams or applications to operate in isolation.
 
 3.ResourceQuota 📊 ---> Limits resource usage within a namespace.
 
