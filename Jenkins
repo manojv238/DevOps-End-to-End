@@ -92,8 +92,16 @@ then go with "credaintals" and create a "docker-hub user and passwd details".
 now go with pipeline stage "create a docker image".
 ---> 6th we can push image to docker hub stage pipeline.
 
++---------------------------------------+
+WORKFLOW OF CICD PIPELINE ARCHITECTURE:-
++---------------------------------------+
+######################################################################################################################################
 
-###################################################################################################################
+GitHub  ---> Code Compile  --->  Code Quality  ---> Code Build  ---> Docker Image ---> Push to Image ---> Image Scan ---> Deploy to K8's
+              (Maven)             Analaysis          (Maven)          (Docker)          (Docker-Hub)         (Trivy)      (Kubernetes)
+                                 (SonarQube)
+
+######################################################################################################################################
 pipeline {
     agent any
     
