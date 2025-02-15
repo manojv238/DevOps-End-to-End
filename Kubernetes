@@ -17,6 +17,8 @@ minikube start
 sudo usermod -aG docker ubuntu 
 exit
 login again now check 
+minikube start
+minikube status
 
 
 
