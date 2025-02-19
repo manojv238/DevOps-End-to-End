@@ -15,7 +15,7 @@ sudo chmod 755 /usr/local/bin/kubectl ---> (Permissions t provide local kubectl)
 kubectl version --client ---> (Kubectl version check)
 minikube start ---> (start Minikube cluster tool)
 sudo usermod -aG docker ubuntu ---> (Permissions provide to user(ubuntu))
-Do exit server..
+Do exit server.
 
 Login again server now check minikube start, status.
 
