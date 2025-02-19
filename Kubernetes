@@ -3,7 +3,7 @@ Steps to follow:
 
 sudo apt-get update -y
 sudo apt install docker.io -y  -----> (Install Docker)
-sudo wget wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 -----> (Install Minikube)
+sudo wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 -----> (Install Minikube)
 sudo mv minikube-linux-amd64 /usr/local/bin/minikube ---> (Move minikube to local permissions)
 sudo chmod 755 /usr/local/bin/minikube ---> (Permissions t provide local minikube)
 minikube version ---> (Minikube version check)
