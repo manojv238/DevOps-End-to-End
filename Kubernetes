@@ -9,7 +9,7 @@ sudo chmod 755 /usr/local/bin/minikube ---> (Permissions t provide local minikub
 minikube version ---> (Minikube version check)
 
 sudo apt install -y curl ---> (Install curl package)
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" ---> (Install Kubectl)
+sudo wget https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl ---> (Install Kubectl)
 sudo mv kubectl /usr/local/bin/kubectl ---> (Move Kubectl to local permissions)
 sudo chmod 755 /usr/local/bin/kubectl ---> (Permissions t provide local kubectl)
 kubectl version --client ---> (Kubectl version check)
