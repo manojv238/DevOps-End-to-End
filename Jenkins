@@ -91,6 +91,10 @@ now gow with tools and chose a add "docker install"
 then go with "credaintals" and create a "docker-hub user and passwd details".
 now go with pipeline stage "create a docker image".
 ---> 6th we can push image to docker hub stage pipeline.
+---> 7th install minikube and kubectl and give permissions and move on local.
+---> 8th we can provide one permission
+    sudo chmod 755 /home/ubuntu/.minikube/profiles/minikube/client.key 
+(Grants read, write, and execute permissions to the owner and read-execute to others).
 
 +---------------------------------------+
 WORKFLOW OF CICD PIPELINE ARCHITECTURE:-
@@ -106,7 +110,12 @@ pipeline {
     agent any
     
     environment {
-        SCANNER_HOME= tool 'sonar-scanner'
+        GIT_REPO = 'https://github.com/manojv238/end-to-end.git'
+        DOCKER_IMAGE = 'demoapp'
+        DOCKER_TAG = '7'
+        DOCKER_REGISTRY = 'manu9121/docker-images'
+        SCANNER_HOME = tool 'sonar-scanner'
+        KUBECONFIG = '/home/ubuntu/.kube/config'
     }
 
     stages{
@@ -164,6 +173,15 @@ pipeline {
                 sh "trivy image manuimage"
               }
            }
+        }
+        stage('DEPLOY TO K8S') {
+            steps {
+                script {
+                    withKubeConfig([credentialsId: 'kubernetes-k8']){
+                        sh "kubectl apply -f k8s/deployment.yaml"
+                    }
+                }
+            }
         }
     }
 }
