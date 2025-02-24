@@ -101,8 +101,8 @@ WORKFLOW OF CICD PIPELINE ARCHITECTURE:-
 +---------------------------------------+
 ######################################################################################################################################
 
-GitHub  ---> Code Compile  --->  Code Quality  ---> Code Build  ---> Docker Image ---> Push to Image ---> Image Scan ---> Deploy to K8's
-              (Maven)             Analaysis          (Maven)          (Docker)          (Docker-Hub)         (Trivy)      (Kubernetes)
+GitHub  ---> Code Compile  --->  Code Quality  ---> Code Build  ---> Docker Image  ---> Image scan---> Push to Image  ---> Deploy to K8's
+              (Maven)             Analaysis          (Maven)          (Docker)            (Trivy)       (Docker-Hub)       (Kubernetes)
                                  (SonarQube)
 
 ######################################################################################################################################
