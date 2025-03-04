@@ -95,6 +95,7 @@ now go with pipeline stage "create a docker image".
 ---> 8th we can provide one permission
     sudo chmod 755 /home/ubuntu/.minikube/profiles/minikube/client.key 
 (Grants read, write, and execute permissions to the owner and read-execute to others).
+---> Check the minikube ip and search for local browser.
 
 +---------------------------------------+
 WORKFLOW OF CICD PIPELINE ARCHITECTURE:-
