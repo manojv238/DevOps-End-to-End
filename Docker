@@ -31,6 +31,10 @@ docker rm <container-id> -----> This command is used to remove a Docker containe
 
 docker rm $(docker ps -a -q) -> This command is ued to remove the all stopped containers are deleted.
 
+docker tag shopfront(ImageName):latest(tag) manu9121(dockerhub-Username)/shopfront(registry):latest --->docker image push to dockerhub
+
+docker push manu9121/shopfront:latest.
+
 
 
 ########### Dockerfiles ############
