@@ -74,7 +74,8 @@ Install for all tools ubuntu/linux :git,java,maven,jenkins,dokcer,sonarqube,triv
 ---> 2nd we can create maven configuration (mvn clean compile)
 ---> 3rd we can install docker we can give permission"(sudo usermod -aG docker jenkins")"restart docker and jenkins."
 using docker run a sonarqube tools code quality.default user nd passwd (admin)9000
-By using command: "docker run -d -p 9000:9000 sonarqube:lts-community" (at a time create image nd container).
+By using command: "docker run -d -p 9000:9000 sonarqube:lts-community" (Ubuntu server-at a time create image nd container).
+By using cmd: "docker run -d --name sonarqube -p 9000:9000 sonarqube:lts" (linux server).
 once ready for sonarqube few steps we will follow below:-
 click by "MANUALLY" for "asking project" (create a new name project) then do setup.
 now go "with jenkins" click github,click next,again,and configures code analysis github.
