@@ -34,6 +34,17 @@ output "public-ip-address" {
 
 
 ### we can create folder is MODULES ### inside folder create main.tf ###
+terraform-project/
+│── main.tf
+│── variables.tf
+│── outputs.tf
+│── terraform.tfvars
+│── modules/
+│   └── ec2-instance/
+│       ├── main.tf 
+│       ├── variables.tf
+│       ├── outputs.tf
+│── main.tf (modules path and pass values)
 
 provider "aws" {
   region = "us-east-1"
