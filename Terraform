@@ -60,6 +60,80 @@ module "ec2_instance" {
 }
 --------------------------------------------------------------------------------------------------------------------------------------
 
+### What is Terraform?
+Ans.Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp Language,
+    thats allows to define and provision infrastructure using a declarative configuration language.
+
+### How does Terraform work?
+Ans.Terraform follows a lifecycle approach with these key steps:
+1. Write: Define infrastructure using HCL.
+2. Init: Initialize Terraform to download providers.
+3. Plan: Preview changes before applying them.
+4. Apply: Deploy infrastructure.
+5. Destroy: Remove infrastructure when no longer needed.
+
+### What are Terraform Providers?
+Ans.Terraform Providers are plugins that enable Terraform to interact with APIs of various services like
+    (AWS, Azure, GCP, etc,).
+
+### What is Terraform State file and why is it important?
+Ans.Terraform state files keeps track of infrastructure resources to map real-world resources with the configuration files.
+1. Stored in (terraform.tfstate)
+2. Supports remote state storage (S3,etc.)
+
+### How do you manage Terraform state in a team?
+Ans.Use Remote State (e.g., S3 with DynamoDB locking, Terraform Cloud)
+    Enable State Locking to avoid multiple users modifying state simultaneously.
+Example for S3 backend:
+-----------------------------------------------------------------------------------------------------------------------
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state"
+    key            = "infra/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-lock"
+  }
+}
+-----------------------------------------------------------------------------------------------------------------------
+### What is a Terraform Module?
+Ans.Terraform modules are reusable configuration units that encapsulate related resources.
+Example module structure:
+-----------------------------------------------------------------------------------------------------------------------
+terraform-project/
+│── main.tf
+│── variables.tf
+│── outputs.tf
+│── terraform.tfvars
+│── modules/
+│   └── ec2-instance/
+│       ├── main.tf 
+│       ├── variables.tf
+│       ├── outputs.tf
+│── main.tf (modules path and pass values)
+-----------------------------------------------------------------------------------------------------------------------
+### What are Terraform Variables and Outputs?
+Ans.Variables in terraform are used to parameterize configurations,it making them dynamic and reusable.
+
+### What are Provisioners in Terraform?
+Ans.Provisioners in Terraform are used to execute scripts or commands on a resource,
+    after it is created or before it is destroyed.
+Types of Provisioners in Terraform:
+1. Local-exec: Executes commands on the machine running Terraform.
+2. Remote-exec: Runs commands on the remote resource (like an EC2 instance).
+3. File: Transfers files from the local system to a remote resource.
+
+### What are Terraform Workspaces?
+Ans.Terraform workspaces provide a way to manage multiple environments (e.g., dev, staging, prod),
+    using the same Terraform configuration.
+-->Each workspace has its own state file, 
+    allowing isolated infrastructure setups without maintaining separate directories.
+    (No need to maintain separate folders for dev, staging, and prod).
+
+
+
+
+
+
 
 
 
