@@ -10,7 +10,7 @@
 +----------------------------------------------------------------------------+
 |  🚀 Plan & Apply                                                          |
 +----------------------------------------------------------------------------+
-| terraform plan         # Show execution plan without applying changes      |
+| terraform plan         # To preview plan without applying changes          |
 | terraform apply        # Deploy or Apply the Terraform changes             |
 | terraform apply -auto-approve  # Apply without confirmation prompt         |
 +----------------------------------------------------------------------------+
