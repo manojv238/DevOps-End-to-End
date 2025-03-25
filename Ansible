@@ -1,2 +1,3 @@
 ### What is Ansible ?
-Ans.Ansible is typically discussed as an open-source automation tool
+Ans.Ansible is an open-source automation tool used for 
+    configuration management, application deployment and orchestration using YAML-based playbooks.
