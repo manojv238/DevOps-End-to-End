@@ -28,6 +28,7 @@ Ans.
 📌 Ansible:
 ✅ Best for managing multiple VMs with different OS types.
 ✅ Uses inventory files to define different hosts and apply the right module automatically.
+🔹 Example: Write a Playbook, configure, and start Nginx on multiple servers.
 
 📌📌📌 Final Recommendation:
 ✅ If it's a one-time task, use Shell scripts.
