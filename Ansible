@@ -15,4 +15,29 @@ Ans.
 📌 Secure & Reliable – Uses SSH and Ansible Vault for security.
 📌 Push Model Execution – Executes tasks from the control node directly.
 
+### Difference Between Ansible, Shell, and Python?
+Ans.
+📌 Shell (Bash/PowerShell):
+✅ Good for one-time execution for shell script but lacks of scalability for complex automation.
+🔹 Example: Shell is wont work with different OS.(linux,ubuntu,windows).
+
+📌 Python:
+✅ More flexible than Shell, supports both Linux and Windows.
+🔹 Example: Writing a script to manage multiple services dynamically.
+
+📌 Ansible:
+✅ Best for managing multiple VMs with different OS types.
+✅ Uses inventory files to define different hosts and apply the right module automatically.
+
+📌 Final Recommendation:
+✅ If it's a one-time task, use Shell scripts.
+✅ If you want custom logic & flexibility, use Python.
+✅ If you need scalability, reusability, and automation, Ansible is the best choice.
+
+
+
+
+
+
+
 
