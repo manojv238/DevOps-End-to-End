@@ -1,3 +1,4 @@
 ### What is Ansible ?
 Ans.Ansible is an open-source automation tool used for 
     configuration management, application deployment and orchestration using YAML-based playbooks.
+    It works by connecting to remote machines via SSH (Linux) or WinRM (Windows),executing tasks without requiring agents.
