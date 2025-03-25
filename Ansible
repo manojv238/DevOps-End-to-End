@@ -29,7 +29,7 @@ Ans.
 ✅ Best for managing multiple VMs with different OS types.
 ✅ Uses inventory files to define different hosts and apply the right module automatically.
 
-📌 Final Recommendation:
+📌📌📌 Final Recommendation:
 ✅ If it's a one-time task, use Shell scripts.
 ✅ If you want custom logic & flexibility, use Python.
 ✅ If you need scalability, reusability, and automation, Ansible is the best choice.
