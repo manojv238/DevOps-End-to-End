@@ -2,3 +2,16 @@
 Ans.Ansible is an open-source automation tool used for 
     configuration management, application deployment and orchestration using YAML-based playbooks.
     It works by connecting to remote machines via SSH (Linux) or WinRM (Windows),executing tasks without requiring agents.
+
+### What are the key features of Ansible?
+Ans.
+📌 Agentless – No need to install agents on managed nodes.
+📌 Simple YAML Syntax – Uses human-readable YAML for playbooks.
+📌 Idempotency – Ensures changes apply only when needed.
+📌 Scalability – Manages thousands of servers efficiently.
+📌 Pre-built Modules – Extensive library for automation tasks.
+📌 Orchestration – Automates multi-tier app deployments.
+📌 Secure & Reliable – Uses SSH and Ansible Vault for security.
+📌 Push Model Execution – Executes tasks from the control node directly.
+
+
