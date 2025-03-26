@@ -3,7 +3,7 @@
 🔹 Uses the ping module to check if hosts are reachable: [ansible all -m ping -i inventory.ini]
 
 2. Execute Shell Commands on Remote Hosts
-🔹 Runs a shell command on all hosts: [ansible all -m command -a "uptime"]
+🔹 Runs a shell command on all hosts: [ansible all -m command -a "uptime"]  ("M" MODULE && "A" ARGUMENTS)
 🔹 Use shell instead of command when you need pipes or redirections: [ansible all -m shell -a "echo Hello > /tmp/testfile.txt"]
 
 3. Manage Users
