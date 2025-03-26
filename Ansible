@@ -4,6 +4,7 @@ Ans.Ansible is an open-source automation tool used for configuration management,
     It works by connecting to remote machines via SSH (Linux) or WinRM (Windows),
     executing tasks without requiring agents.
 
+
 ### What are the key features of Ansible?
 Ans.
 📌 Agentless – No need to install agents on managed nodes.
@@ -14,6 +15,7 @@ Ans.
 📌 Orchestration – Automates multi-tier app deployments.
 📌 Secure & Reliable – Uses SSH and Ansible Vault for security.
 📌 Push Model Execution – Executes tasks from the control node directly.
+
 
 ### Difference Between Ansible, Shell, and Python?
 Ans.
@@ -34,6 +36,7 @@ Ans.
 ✅ If it's a one-time task, use Shell scripts.
 ✅ If you want custom logic & flexibility, use Python.
 ✅ If you need scalability, reusability, and automation, Ansible is the best choice.
+
 
 ### What is Ansible Inventory?
 Ans.Ansible inventory is a file or source that contains information about managed hosts (nodes),where Ansible will execute tasks.
@@ -62,5 +65,13 @@ db1 ansible_host=192.168.1.20 ansible_user=root
 ✅ Uses scripts or plugins to dynamically pull instance details.
 
 
+### Difference Between Ansible Ad-Hoc Commands and Playbooks?
+Ans.
+1. Ad-Hoc Commands are One-time commands and used for simple tasks on managed nodes.
+   They are primarily used for tasks like checking connectivity, managing services, and installing packages.
+   Use Case: Restarting a service, checking uptime, or running a quick shell command.
 
+2. Ansible Playbooks are YAML-based automation scripts that define a set of tasks to be executed on managed nodes.
+   Playbooks are reusable, structured, and support advanced features like loops, conditions, and handlers
+   Use Case: Automating infrastructure setup, application deployments, and configuration management.
 
