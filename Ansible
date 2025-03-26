@@ -43,7 +43,7 @@ It defines groups of hosts and their connection details, such as IP addresses, S
 --------------------------------------------------------
 1. Static Inventory (Default: /etc/ansible/hosts):-
 ✅ A simple file with manually defined hosts and groups.
-🔹 Example (inventory.ini): "file inside content"
+🔹 Example (inventory.ini): "ini-Extention"
 --------------------------------------------------------
 [web]
 web1 ansible_host=192.168.1.10 ansible_user=ubuntu
