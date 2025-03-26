@@ -1,3 +1,42 @@
+######################################################### Ansible Ad-Hoc Commands ################################################################
+1. Test Connectivity (Ping All Hosts)
+🔹 Uses the ping module to check if hosts are reachable: [ansible all -m ping -i inventory.ini]
+
+2. Execute Shell Commands on Remote Hosts
+🔹 Runs a shell command on all hosts: [ansible all -m command -a "uptime"]
+🔹 Use shell instead of command when you need pipes or redirections: [ansible all -m shell -a "echo Hello > /tmp/testfile.txt"]
+
+3. Manage Users
+🔹 Create a new user: [ansible all -m user -a "name=john state=present"]
+🔹 Delete a user: [ansible all -m user -a "name=john state=absent"]
+
+4. Manage Services
+🔹 Start a service: [ansible all -m service -a "name=nginx state=started"]
+🔹 Restart a service: [ansible all -m service -a "name=nginx state=restarted"]
+🔹 Stop a service: [ansible all -m service -a "name=nginx state=stopped"]
+
+5. Install or Remove Packages
+🔹 For Ubuntu/Debian: [ansible all -m apt -a "name=nginx state=present"]
+🔹 For RHEL/CentOS: [ansible all -m yum -a "name=nginx state=present"]
+🔹 To uninstall a package: [ansible all -m apt -a "name=nginx state=absent"]
+
+6. Copy Files to Remote Hosts
+🔹 Copy files to remote hosts: [ansible all -m copy -a "src=/local/file.txt dest=/remote/path/file.txt"]
+🔹 Copy a file with specific permissions: [ansible all -m copy -a "src=/local/file.txt dest=/remote/path/file.txt mode=0644"]
+
+7. Fetch Files from Remote Hosts
+🔹 This copies /remote/path/file.txt from all hosts to the control node: [ansible all -m fetch -a "src=/remote/path/file.txt dest=/local/path/"]
+
+8. Change File Permissions
+🔹 Change ownership: [ansible all -m file -a "path=/remote/path/file.txt owner=root group=root"]
+🔹 Change permissions: [ansible all -m file -a "path=/remote/path/file.txt mode=0755"]
+
+9. Reboot Remote Machines
+🔹 Useful after kernel updates or system maintenance: [ansible all -m reboot]
+
+10. Gather System Facts
+🔹 This collects detailed system information like OS, CPU, memory, and network details: [ansible all -m setup]
+####################################################################################################################################################
 ### What is Ansible ?
 Ans.Ansible is an open-source automation tool used for configuration management, infrastructure provisioning, 
     application deployment and orchestration by using YAML-based playbooks.
