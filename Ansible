@@ -35,9 +35,31 @@ Ans.
 ✅ If you want custom logic & flexibility, use Python.
 ✅ If you need scalability, reusability, and automation, Ansible is the best choice.
 
+### What is Ansible Inventory?
+Ans.Ansible inventory is a file or source that contains information about managed hosts (nodes),where Ansible will execute tasks.
+It defines groups of hosts and their connection details, such as IP addresses, SSH users, and authentication methods.
+--------------------------------------------------------
+📌 Types of Ansible Inventory:
+--------------------------------------------------------
+1. Static Inventory (Default: /etc/ansible/hosts):-
+✅ A simple file with manually defined hosts and groups.
+🔹 Example (inventory.ini): "file inside content"
+--------------------------------------------------------
+[web]
+web1 ansible_host=192.168.1.10 ansible_user=ubuntu
+web2 ansible_host=192.168.1.11 ansible_user=ubuntu
 
+[db]
+db1 ansible_host=192.168.1.20 ansible_user=root
+--------------------------------------------------------
+✅ Run an ad-hoc command to check connectivity:
+---> ansible all -m ping -i inventory.ini
 
-
+2. Dynamic Inventory (For Cloud Environments: AWS, Azure, GCP, etc.):-
+✅ Automatically fetches hosts from cloud providers.
+🔹 Example (AWS EC2 dynamic inventory):
+---> ansible-inventory -i aws_ec2.yml --list
+✅ Uses scripts or plugins to dynamically pull instance details.
 
 
 
