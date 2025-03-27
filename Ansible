@@ -114,6 +114,36 @@ Ans.
    Playbooks are reusable, structured, and support advanced features like loops, conditions, and handlers
    Use Case: Automating infrastructure setup, application deployments, and configuration management.
 
+🔹 Basic Structure of an Ansible Playbook
+A playbook consists of the following key components:
+---------------------------------------------------------------------------------------------------
+Component   |	Description
+---------------------------------------------------------------------------------------------------
+hosts	   ---> Defines target machines (groups or individual servers).
+become     --->	Runs tasks with elevated privileges (sudo).
+tasks	   ---> Defines the actions to be performed.
+handlers   --->	Executes tasks only when notified (e.g., restart a service after configuration changes).
+vars	   ---> Stores variables for reuse.
+roles	   ---> Reusable task sets for modular automation.
+-----------------------------------------------------------------------------------------------------
+🔹 Example 1: A Simple Ansible Playbook:
+---
+- name: Install and Configure Nginx
+  hosts: web_servers    # Target hosts from the inventory
+  become: yes          # Run as sudo (root privileges)
+
+  tasks:
+    - name: Install Nginx
+      package:
+        name: nginx
+        state: present
+
+    - name: Start and Enable Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+-------------------------------------------------------------------------------------------------------
 
 ### What is an Ansible Module?
 Ans.Ansible modules are pre-built scripts and can be used in playbooks or ad-hoc commands to automate tasks,
@@ -201,6 +231,26 @@ Ans.Ansible modules are pre-built scripts and can be used in playbooks or ad-hoc
     ports:
       - "80:80"
 ----------------------------------------
+
+### What is an Ansible Role?
+Ans.An Ansible Role is a way to organize automation tasks logically and modularly.
+    Roles structure playbooks into reusable components, making automation scalable, maintainable, reusable across different projects.
+🔹 Role Directory Structure
+When you create an Ansible role, it follows this default directory structure:
+
+my_role/
+│── tasks/           # Main tasks for the role
+│   ├── main.yml     # Entry point for tasks
+│── handlers/        # Handlers (triggered by tasks)
+│── templates/       # Jinja2 templates (dynamic config files)
+│── files/           # Static files (e.g., scripts, binaries)
+│── vars/            # Variables specific to the role
+│── defaults/        # Default variables (lower precedence)
+│── meta/            # Role metadata (dependencies, author info)
+│── tests/           # Test cases for the role
+│── README.md        # Documentation for the role
+
+
 
 
 
