@@ -234,7 +234,7 @@ Ans.Ansible modules are pre-built scripts and can be used in playbooks or ad-hoc
 
 ### What is an Ansible Role?
 Ans.An Ansible Role is a way to organize automation tasks logically and modularly.
-    Roles structure playbooks into reusable components, making automation scalable, maintainable, reusable across different projects.
+    Roles structure playbooks into reusable components, making automation scalability, maintainable, reusable across different projects.
 🔹 Role Directory Structure
 When you create an Ansible role, it follows this default directory structure:
 
@@ -251,7 +251,9 @@ my_role/
 │── README.md        # Documentation for the role
 
 
-
+### What is Ansible Galaxy?
+Ans.Ansible Galaxy is a repository for sharing, downloading, and managing Ansible roles and collections.
+    It allows users to reuse community-contributed roles or create and distribute their own.
 
 
 
