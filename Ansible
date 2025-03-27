@@ -114,3 +114,102 @@ Ans.
    Playbooks are reusable, structured, and support advanced features like loops, conditions, and handlers
    Use Case: Automating infrastructure setup, application deployments, and configuration management.
 
+
+### What is an Ansible Module?
+Ans.Ansible modules are pre-built scripts and can be used in playbooks or ad-hoc commands to automate tasks,
+    like system configuration, cloud provisioning, Kubernetes deployments, and CI/CD pipelines.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔹 Types of Ansible Modules (With Examples)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 1. System Modules
+➤ user, service, cron, hostname
+✅ Example: Create a user
+---
+- name: Create a new user
+  user:
+    name: devops_user
+    state: present
+    groups: sudo
+------------------------------------------
+📌 2. Package Modules
+➤ apt, yum, dnf, pip
+✅ Example: Install Nginx
+---
+- name: Install Nginx on Ubuntu
+  apt:
+    name: nginx
+    state: present
+-----------------------------------------
+📌 3. File Modules
+➤ file, copy, template, fetch
+✅ Example: Copy a configuration file
+---
+- name: Copy a file
+  copy:
+    src: /home/user/config.conf
+    dest: /etc/config.conf
+    mode: '0644'
+----------------------------------------
+📌 4. Cloud Modules
+➤ ec2_instance, gcp_compute_instance, azure_rm_virtualmachine
+✅ Example: Launch an EC2 instance
+---
+- name: Launch EC2 instance
+  amazon.aws.ec2_instance:
+    name: my-instance
+    state: running
+    instance_type: t2.micro
+    image_id: ami-12345678
+---------------------------------------
+📌 5. Networking Modules
+➤ ios_config, firewalld, iptables
+✅ Example: Enable HTTP in Firewalld
+---
+- name: Allow HTTP traffic
+  firewalld:
+    service: http
+    state: enabled
+    permanent: yes
+    immediate: yes
+-------------------------------------
+📌 6. Kubernetes Modules
+➤ k8s, helm
+✅ Example: Deploy an Nginx Pod
+---
+- name: Deploy Nginx Pod in Kubernetes
+  k8s:
+    state: present
+    definition:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: nginx-pod
+      spec:
+        containers:
+          - name: nginx
+            image: nginx:latest
+-----------------------------------------
+📌 7. CI/CD & DevOps Modules
+➤ git, docker_container, jenkins_job
+✅ Example: Run an Nginx container
+---
+- name: Run Nginx container
+  docker_container:
+    name: nginx
+    image: nginx:latest
+    state: started
+    ports:
+      - "80:80"
+----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
