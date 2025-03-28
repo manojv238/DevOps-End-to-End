@@ -44,6 +44,7 @@ Ans.Kubernetes (K8s) follows a Master Node-Worker Node architecture :-
     +---------------------------+
     1. Kubelet ---> "The Kubelet on that Worker Node communicates with the API Server to ensure the Pod is running".
     2. Kube Proxy ---> "Kube Proxy ensures networking and allows communication between Pods and Services".
+
     3. Container Runtime ---> "The Container Runtime starts the container(s) inside the Pod".
     4. Pods (containers inside) ---> "A group of one or more containers running instances of an application".
 
